@@ -1,0 +1,170 @@
+/* Prevent the Navbar from Shrinking Too Much */
+body {
+    min-width: 360px; /* Prevents extreme shrinking */
+    overflow-x: hidden; /* Stops horizontal scroll issues */
+}
+
+/* Navbar Background with Image */
+.navbar {
+    background: url('../assets/bg.png') no-repeat center center/cover;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 120px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 600px; /* Prevents extreme minimization */
+}
+
+/* Brand Section (Logo & Name) */
+.brand {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents breaking */
+}
+
+.brand img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.brandName {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap; /* Prevents text from cutting */
+}
+
+.brand-name{
+    display: block;
+}
+.fullForm {
+    font-size: 12px;
+    color: white;
+    display: block;
+    white-space: nowrap; /* Ensures it doesn’t wrap weirdly */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+    padding: 10px 15px; /* Prevents text cutoff */
+    display: inline-block;
+    white-space: nowrap; /* Ensures no cutoff */
+    overflow: hidden; /* Stops weird cropping */
+    text-overflow: ellipsis; /* Adds "..." if space is too low */
+}
+
+/* Centered Text */
+.center-text {
+    position: absolute;
+    top: 90px; /* Adjust based on navbar height */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hide Nav Links by Default on Mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px;
+        width: 100%;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+}
