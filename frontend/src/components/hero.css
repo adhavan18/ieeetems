@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+.hero{
+    /* background: url('../assets/bg.png') no-repeat center center/cover; */
+    min-height: 700px;
+    width: auto;
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: darkblue; */
+}
+
+.heroText {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    /* align-items: right; */
+    width: 500px;
+    height: 200px;
+    /* background-color: black; */
+}
+
+.heroText h1 {
+    font-size: 100px;
+}

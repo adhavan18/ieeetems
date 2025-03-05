@@ -6,11 +6,11 @@ body {
 
 /* Navbar Background with Image */
 .navbar {
-    background: url('../assets/bg.png') no-repeat center center/cover;
-    background-color: black;
+    /* background: url('../assets/bg.png') no-repeat center center/cover; */
+    background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 15px 40px;
     position: fixed;
     width: 100%;
@@ -19,7 +19,7 @@ body {
     z-index: 1000;
     height: 120px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 600px; /* Prevents extreme minimization */
+    min-width: 400px; /* Prevents extreme minimization */
 }
 
 /* Brand Section (Logo & Name) */
@@ -98,7 +98,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .navbar {
         padding: 10px 20px;
     }

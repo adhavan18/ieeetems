@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import logo from '../assets/tems.jpg';
+import logo from '../assets/tems.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,19 +10,14 @@ const Navbar = () => {
       <div className="brand">
         <img src={logo} alt="logo" />
         <div className="brand-name">
-        <span className="brandName">IEEE TEMS</span>
-        <span className="fullForm">Technology & Engineering Management Society</span>
+          <span className="brandName">IEEE TEMS</span>
+          <span className="fullForm">Technology & Engineering Management Society</span>
         </div>
       </div>
-      
-      <div className="center-text">
-    <span className="line1">We   Innovate</span>
-    <span className="line2">   Build,   Lead</span>
-  </div>
 
-      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+      {/* <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         ☰
-      </div>
+      </div> */}
 
       <ul className={`nav-links ${isOpen ? "active" : ""}`}>
         <li><a href="Events">Events</a></li>
