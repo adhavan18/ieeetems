@@ -56,7 +56,7 @@ const RandomLinesBackground = () => {
     }
   }, []);
 
-  return null; // Since it's just setting a background, no need to render anything
+  return null;
 };
 
 export default Hero;
