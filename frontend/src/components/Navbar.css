@@ -7,7 +7,7 @@ body {
 /* Navbar Background with Image */
 .navbar {
     background: url('../assets/bg.png') no-repeat center center/cover;
-    background-color: black;
+    background-color:black; 
     display: flex;
     align-items: center;
     justify-content: space-between;
